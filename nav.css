@@ -4,20 +4,17 @@
     text-decoration: none;
     list-style: none;
 }
-
 :root{
     --primaryColor: #4C8D70;
     --textColor: #1D1C1C;
     --bgcolor: #fcfcfc;
 }
-
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bgcolor);
-  padding: 0 80px;
+  padding: 0 120px;
   margin: 0;
 }
-
 /* navbar */
 header{
     position: fixed;
@@ -30,16 +27,13 @@ header{
     justify-content: space-between;
     position: relative;
 }
-
 .logo{
     display: flex;
     align-items: center;
 }
-
 .navbar{
     display: flex;
 }
-
 .navbar ul{
     display: flex;
     gap: 21px;
@@ -47,34 +41,35 @@ header{
     padding: 0;
     margin: 0;
 }
-
 .navbar a{
     color: var(--textColor);
-    font-size: 20px;
+    font-size: 17px;
 }
-
 .navbar a:hover{
     color: var(--primaryColor);
 }
-
 .main{
     display: flex;
     align-items: center;
 }
-
-
 .main .icon-btn{
-    margin-right:23px ;
-    margin-left: 10px;
-    color: var(--textColor);
-    font-size:24px;
-    background: none;
-    border: none;
-    cursor: pointer;
+  margin-right: 20px;
+  color: var(--textColor);
+  font-size:24px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
-
+.main .icon-btn2{
+  margin-right: 0px;
+  color: var(--textColor);
+  font-size:24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 .menu{
-    display: none;
+    display: none; /*icon humburgernya di hide*/
 }
 
 /* Hero */
@@ -84,27 +79,24 @@ header{
   align-items: center;
   margin-top: 65px;
 }
-
+.hero-text{
+  display: block;
+}
 .hero .hero-text h1 {
   font-size: 50px;
   margin: 0;
 }
-
 .hero-text-hd{
-  display: none;
+  display: none; /*dihilangin saat di dekstop*/
 }
-
 .warna {
   color: var(--primaryColor);
 }
-
 .hero .hero-text p {
   font-size: 14px;
   opacity: 60%;
-  margin-top: 16px;
   font-family: 'Open Sans';
 }
-
 .btn-primary {
   background-color: var(--primaryColor);
   color: var(--bgcolor);
@@ -117,7 +109,6 @@ header{
   font-family: 'Open Sans';
   font-weight: 400; /*reguler*/
 }
-
 .btn-secondary {
   background-color: var(--bgcolor);
   color: #4C8D70;
@@ -129,7 +120,6 @@ header{
   font-family: 'Open Sans';
   font-weight: 400; /*reguler*/
 }
-
 .hero-img{
   width: 100%;
   display: flex;
@@ -143,6 +133,7 @@ header{
 .about-us{
     display: flex; /*supaya bersebelahan*/
     align-items: center;
+    padding-top: 120px;
 }
 .about-text{
     margin-left: 75px; /*jarak perdetail*/
@@ -158,6 +149,7 @@ header{
     width: 46px;
     border: 1px solid var(--textColor);
     line-height: 1px;
+    margin-right: 12px;
 }
 .section-label p{
     color: var(--textColor);
@@ -179,9 +171,10 @@ header{
     font-family: 'Open Sans';
 }
 .about-detail{
+  margin-top: 28px;
     color: var(--primaryColor);
     font-family: 'Open Sans';
-    height: 180px;
+    height: 130px;
 }
 .detail h2{
     font-weight: 600; /*semibold*/
@@ -192,17 +185,15 @@ header{
     font-size: 18px;
 }
 .detail{
-    padding-left: 20px; /*jarak info badges*/
     padding-right: 20px; /*jarak info badges*/
     margin-bottom:40px;
 }
-
 .line-right {
     border-right: 1px solid var(--primaryColor);
-    margin-top: 0%;
+    margin-top: 7%; /*untuk memberikan jarak atas di garis*/
     height: 64px;
+    margin-right: 40px; /*jarak dari garis ke info badges yg lain*/
 }
-
 .about-img img{
     width:90%;
 }
@@ -227,7 +218,6 @@ header{
     cursor: pointer;
     font-size: 16px;
 }
-
 .btn-secondary {
     background-color: #fcfcfc;
     color: #4C8D70;
@@ -237,77 +227,92 @@ header{
     cursor: pointer;
     font-size: 16px;
 }
+.arrow-up-right{
+  font-size: 24px;
+}
+.btn button{
+  display: flex;
+}
 
 
 
-@media (max-width: 768px){  /*tablet*/
+
+
+
+
+@media (min-width: 768px){  /*tablet*/
   body{
-    padding: 0px;
+    padding: 0 30px;
     align-items: center;
-    height: 100vh;
   }
-
+  .logo img{
+    width: 85%;
+}
   .navbar a{
-    font-size: 9px;
+    font-size: 20px;
   }
   
   /* hero section */
   .hero{
     align-items: center;
     display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  align-items: center;
-  margin-top: 65px;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    margin-top: 45px;
   }
-
   .hero-text{
-    display: none;
+    display: none; /*hilangin di mode tablet*/
   }
-  .hero-img img{
+  .hero-img{
     display: none;
   }
   .hero-text-hd{
     display: block;
     font-size: 35px;
-    margin: 0;
     width: 100%;
   }
   .hero-text-hd p {
-    font-size: 12px;
+    font-size: 20px;
     opacity: 60%;
-    margin-top: 16px;
   }
-
-    .btn-primary {
-      background-color: var(--primaryColor);
-      color: var(--bgcolor);
-      border: none;
-      padding: 11px 29px;
-      border-radius: 10px;
-      margin-right: 16px;
-      cursor: pointer;
-      font-size: 15px;
-    }
-
-    .btn-secondary {
-      background-color: var(--bgcolor);
-      color: var(--primaryColor);
-      border: 2px solid var(--primaryColor);
-      padding: 11px 29px;
-      border-radius: 10px;
-      cursor: pointer;
-      font-size: 15px;
-    }
-
+  .hero-text-hd .btn{
+    display: flex;
+  }
+  .btn-primary {
+    background-color: var(--primaryColor);
+    color: var(--bgcolor);
+    border: none;
+    padding: 11px 29px;
+    border-radius: 10px;
+    margin-right: 16px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  .btn-secondary {
+    background-color: var(--bgcolor);
+    color: var(--primaryColor);
+    border: 2px solid var(--primaryColor);
+    padding: 11px 29px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+  }
     /* about us */
     .about-text{
     margin-left: 75px; /*jarak perdetail*/
   }
 }
 
+
+
+
+
+
+
+
 @media (max-width: 640px){ /*mobile*/
   body{
-    padding: 0 5px;
+    padding: 0 10px;
   }
   /* navbar */
   .menu{
@@ -328,30 +333,58 @@ header{
     transition: all .50s ease;
   }
   .navbar ul{
-      display: flex;
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
   .navbar a{
-      display: block;
-      margin: 12px 0;
-      padding: 0 25px;
-      transition: all .50s ease;
+    display: block;
+    margin: 12px 0;
+    padding: 0 25px;
+    transition: all .50s ease;
   }
   .navbar a:hover{
-      color:var(--bgcolor);
+    color:var(--bgcolor);
   }
   .navbar.open{
-      right: 2%;
+    right: 2%;
   }
+  .main .icon-btn{
+    margin-right: 10px;
+    color: var(--textColor);
+    font-size:24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+.main .icon-btn2{
+    margin-right: 10px;
+    color: var(--textColor);
+    font-size:24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .main .icon-btn3{
+    margin-right: 0px;
+    color: var(--textColor);
+    font-size:24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
   /* hero section */
   .hero {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  align-items: center;
-  margin-top: 65px;
-}
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    margin-top: 65px;
+  }
   .hero-text{
-    display: none;
+    display: none; /*disembbunyikan*/
+  }
+  .hero-text-hd{
+    display: block;
   }
   .hero-text-hd h1{
     margin-top: auto;
@@ -368,17 +401,16 @@ header{
   .hero-img{
     display: none;
   }
-  .btn{
+  .hero-text-hd .btn{
     display: flex;
   }
   .btn-primary {
     background-color: var(--primaryColor);
-    width: 134px;
-    height: 47px;
     color: var(--bgcolor);
     border: none;
-    padding: 5px 20px;
+    padding: 8px 25px;
     border-radius: 10px;
+    margin-right: 16px;
     cursor: pointer;
     font-size: 15px;
   }
@@ -386,9 +418,7 @@ header{
     background-color: var(--bgcolor);
     color: var(--primaryColor);
     border: 2px solid var(--primaryColor);
-    width: 134px;
-    height: 47px;
-    padding: 11px 20px;
+    padding: 11px 29px;
     border-radius: 10px;
     cursor: pointer;
     font-size: 15px;
