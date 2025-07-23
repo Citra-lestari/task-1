@@ -159,7 +159,6 @@ header{
 .about-text h1{
     font-size: 35px;
     margin-top: 12px;
-    font-family: 'Poppins';
     color: var(--textColor);
 }
 .warna{
@@ -209,29 +208,85 @@ header{
     gap: 32px;
 }
 .btn-primary {
-    background-color: #4C8D70;
-    color: #fcfcfc;
-    border: none;
-    padding: 11px 34px;
-    border-radius: 10px;
-    margin-right: 16px;
-    cursor: pointer;
-    font-size: 16px;
+  background-color: var(--primaryColor);
+  color: var(--bgcolor);
+  border: none;
+  padding: 11px 34px;
+  border-radius: 10px;
+  margin-right: 16px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: 400; /*reguler*/
 }
 .btn-secondary {
-    background-color: #fcfcfc;
-    color: #4C8D70;
-    border: 2px solid #4C8D70;
-    padding: 11px 34px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
+  background-color: var(--bgcolor);
+  color: #4C8D70;
+  border: 2px solid var(--primaryColor);
+  padding: 11px 34px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: 400; /*reguler*/
 }
 .arrow-up-right{
   font-size: 24px;
 }
 .btn button{
   display: flex;
+}
+
+/* card prodduct */
+.card-product{
+  padding-top: 120px;
+}
+.card-text{
+  display: flex;
+  justify-content: space-between; /*bbiar mentok di kanan*/
+}
+.card-text h1{
+  font-weight: 600;
+  font-size: 44px;
+  margin: 0;
+  padding: 0;
+}
+.card-text p {
+  font-size: 16px;
+  opacity: 60%;
+  font-family: 'Open Sans';
+  width: 423px;
+}
+.button-category{
+  display: flex;
+}
+.btn-filter{
+  margin-right: 14px;
+  background-color: var(--bgcolor);
+  color: var(--bgcolor);
+  border: 2px solid var(--primaryColor);
+  padding: 6px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: 400; /*reguler*/
+}
+.btn-filter:hover{
+  background-color: var(--primaryColor);
+  color: var(--bgcolor);
+}
+.view-all{
+  justify-content: space-between;
+  margin-right: 14px;
+  background-color: var(--primaryColor);
+  color: var(--bgcolor);
+  padding: 6px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: 400; /*reguler*/
 }
 
 
@@ -310,7 +365,7 @@ header{
 
 
 
-@media (max-width: 640px){ /*mobile*/
+@media (min-width: 0px) and (max-width: 768px){ /*mobile*/
   body{
     padding: 0 10px;
   }
@@ -422,5 +477,10 @@ header{
     border-radius: 10px;
     cursor: pointer;
     font-size: 15px;
+  }
+
+  /* about us */
+  .about-img{
+    display: none;
   }
 }
