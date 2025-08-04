@@ -79,15 +79,10 @@ header{
   align-items: center;
   margin-top: 65px;
 }
-.hero-text{
-  display: block;
-}
 .hero .hero-text h1 {
-  font-size: 50px;
+  font-size: 55px;
   margin: 0;
-}
-.hero-text-hd{
-  display: none; /*dihilangin saat di dekstop*/
+  width: 650px;
 }
 .warna {
   color: var(--primaryColor);
@@ -95,7 +90,11 @@ header{
 .hero .hero-text p {
   font-size: 14px;
   opacity: 60%;
+  width: 630px;
   font-family: 'Open Sans';
+}
+.btn{
+  display: flex;
 }
 .btn-primary {
   background-color: var(--primaryColor);
@@ -141,33 +140,34 @@ header{
 .about-desc{
     color: var(--textColor);
 }
+.line {
+    width: 46px;
+    border: 1px solid #1D1C1C;
+    opacity: 60%;
+    line-height: 1px;
+    margin-right: 12px;
+}
 .section-label{
     display: flex;
     align-items: center;
 }
-.line {
-    width: 46px;
-    border: 1px solid var(--textColor);
-    line-height: 1px;
-    margin-right: 12px;
-}
 .section-label p{
-    color: var(--textColor);
+    color: #1D1C1C;
+    opacity: 60%;
     position: relative;
     font-family: 'Open Sans';
+    font-size: 18px;
 }
-.about-text h1{
+.about-text .about-desc h1{
     font-size: 35px;
     margin-top: 12px;
     color: var(--textColor);
 }
-.warna{
-    color: var(--primaryColor);
-}
-.about-text p{ /*nama section*/
+.about-text .about-desc p{ 
     font-size: 14px;
     opacity: 60%;
     font-family: 'Open Sans';
+    width: 580px;
 }
 .about-detail{
   margin-top: 28px;
@@ -182,10 +182,7 @@ header{
 .detail p{
     font-weight: 400; /*reguler*/
     font-size: 18px;
-}
-.detail{
-    padding-right: 20px; /*jarak info badges*/
-    margin-bottom:40px;
+    width: auto;
 }
 .line-right {
     border-right: 1px solid var(--primaryColor);
@@ -206,6 +203,9 @@ header{
 .container-deatil {
     display: flex; 
     gap: 32px;
+}
+.btn{
+  display: flex;
 }
 .btn-primary {
   background-color: var(--primaryColor);
@@ -255,15 +255,16 @@ header{
   font-size: 16px;
   opacity: 60%;
   font-family: 'Open Sans';
-  width: 423px;
+  width: 400px;
 }
 .button-category{
   display: flex;
+  justify-content: space-between;
 }
 .btn-filter{
   margin-right: 14px;
   background-color: var(--bgcolor);
-  color: var(--bgcolor);
+  color: var(--primaryColor);
   border: 2px solid var(--primaryColor);
   padding: 6px 30px;
   border-radius: 10px;
@@ -278,9 +279,9 @@ header{
 }
 .view-all{
   justify-content: space-between;
-  margin-right: 14px;
   background-color: var(--primaryColor);
   color: var(--bgcolor);
+  border: 2px solid var(--primaryColor);
   padding: 6px 30px;
   border-radius: 10px;
   cursor: pointer;
@@ -288,14 +289,96 @@ header{
   font-family: 'Open Sans';
   font-weight: 400; /*reguler*/
 }
+.container-card{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 40px;
+  gap: 30px 20px;
+}
+.card{
+  border:1px solid var(--primaryColor);
+  padding: 14px;
+  border-radius: 10px;
+}
+.sayur-card img{
+  margin: auto;
+  width: 85%;
+}
+.desc{
+  padding: 0;
+}
+.nama{
+  display: flex;
+  justify-content: space-between;
+}
+.nama p{
+  font-size: 16px ;
+  color: var(--textColor);
+  font-weight: 500;
+}
+.nama .category{
+  font-size: 12px;
+  padding: 3px 8px;
+  border: 0.5px solid #4C8D70;
+  color: #4C8D70;
+  width: 85px;
+  border-radius: 20px;
+}
+.desc2 p{
+  margin-top: 12px;
+  font-family: 'Open Sans';
+  font-size: 13px;
+  opacity: 70%;
+  color: #1D1C1C;
+}
+.action{
+  display: flex;
+  justify-content: space-between;
+}
+.shop{
+  margin-right: 14px;
+  background-color: var(--primaryColor);
+  color: var(--bgcolor);
+  border: 2px solid var(--primaryColor);
+  padding: 3px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Open Sans';
+  font-weight: 400; /*reguler*/
+}
+.cart{
+  background-color: var(--bgcolor);
+  color: var(--primaryColor);
+  border: 2px solid var(--primaryColor);
+  padding: 1px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: 'Open Sans';
+  font-weight: 400; /*reguler*/
+}
+.harga{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.harga p{
+  font-size: 16px;
+  margin: 0;
+  margin-top: 0;
+}
+.rating p{
+  font-size: 14px;
+  margin: 0;
+  margin-top: 0;
+}
 
 
 
 
 
-
-
-@media (min-width: 768px){  /*tablet*/
+@media (min-width: 768px) and (max-width: 1023px){  /*tablet*/
   body{
     padding: 0 30px;
     align-items: center;
@@ -315,22 +398,20 @@ header{
     align-items: center;
     margin-top: 45px;
   }
-  .hero-text{
-    display: none; /*hilangin di mode tablet*/
-  }
   .hero-img{
     display: none;
   }
-  .hero-text-hd{
+  .hero .hero-text h1{
     display: block;
-    font-size: 35px;
-    width: 100%;
+    font-size: 47px;
+    width: auto;
   }
-  .hero-text-hd p {
-    font-size: 20px;
+  .hero .hero-text p {
+    font-size: 16px;
     opacity: 60%;
+    width: auto;
   }
-  .hero-text-hd .btn{
+  .hero-text .btn{
     display: flex;
   }
   .btn-primary {
@@ -352,9 +433,34 @@ header{
     cursor: pointer;
     font-size: 15px;
   }
-    /* about us */
-    .about-text{
-    margin-left: 75px; /*jarak perdetail*/
+  /* about us */
+  .about-text{
+    margin-left: 0px; /*jarak perdetail*/
+  }
+  .line {
+    width: 46px;
+    border: 1px solid var(--textColor);
+    line-height: 1px;
+    margin-right: 12px;
+  }
+  .section-label p{
+    color: var(--textColor);
+    position: relative;
+    font-family: 'Open Sans';
+    font-size: 15px;
+  }
+  .about-text .about-desc h1{ 
+    font-size: 37px;
+  }
+  .about-text .about-desc p{ /*nama section*/
+    font-size: 16px;
+    opacity: 60%;
+    font-family: 'Open Sans';
+    width: auto;
+    /* width: 450px; */
+  }
+  .about-img{
+    display: none;
   }
 }
 
@@ -435,23 +541,16 @@ header{
     align-items: center;
     margin-top: 65px;
   }
-  .hero-text{
-    display: none; /*disembbunyikan*/
-  }
-  .hero-text-hd{
-    display: block;
-  }
-  .hero-text-hd h1{
-    margin-top: auto;
-    display: block;
-    font-size: 28px;
+  .hero .hero-text h1{
+    font-size: 26px;
     margin: 0;
-    max-width: 600px;
+    width: auto;
   }
-  .hero .hero-text-hd p {
+  .hero .hero-text p {
     font-size: 12px;
     opacity: 60%;
     margin-top: 16px;
+    width: auto;
   }
   .hero-img{
     display: none;
@@ -459,17 +558,17 @@ header{
   .hero-text-hd .btn{
     display: flex;
   }
-  .btn-primary {
+  .btn .btn-primary {
     background-color: var(--primaryColor);
     color: var(--bgcolor);
     border: none;
-    padding: 8px 25px;
+    padding: 8px 20px;
     border-radius: 10px;
     margin-right: 16px;
     cursor: pointer;
     font-size: 15px;
   }
-  .btn-secondary {
+  .btn .btn-secondary {
     background-color: var(--bgcolor);
     color: var(--primaryColor);
     border: 2px solid var(--primaryColor);
@@ -480,7 +579,53 @@ header{
   }
 
   /* about us */
+  .about-text{
+    margin-left: 0px; /*jarak perdetail*/
+  }
+  .about-text .about-desc h1{
+    font-size: 27px;
+  }
+  .about-text .about-desc p{
+    font-size: 12px;
+    width: auto;
+  }
   .about-img{
-    display: none;
+    display: none; /*menghilangkan*/
+  }
+  .line {
+    width: 35px;
+    border: 1px solid #1D1C1C;
+    opacity: 60%;
+    line-height: 1px;
+    margin-right: 12px;
+  }
+  .section-label p{
+    color: #1D1C1C;
+    opacity: 60%;
+    position: relative;
+    font-family: 'Open Sans';
+    font-size: 15px;
+  }
+  .about-text .about-desc h1{
+    font-size: 26px;
+    margin: 0;
+    width: auto;
+    margin-top: 10px; /*ngatur jarak judul sama nama section*/
+    color: var(--textColor);
+  }
+  .about-text .about-desc p{
+    font-size: 12px;
+    opacity: 60%;
+    margin-top: 5px;
+    width: auto;
+  }
+  .detail h2{
+    font-weight: 600; /*semibold*/
+    font-size: 25px;
+  }
+  .detail p{
+    font-weight: 400; /*reguler*/
+    font-size: 16px;
+    width: auto;
   }
 }

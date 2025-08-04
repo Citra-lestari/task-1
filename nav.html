@@ -40,14 +40,6 @@
     <!-- hero section -->
     <section class="hero">
         <div class="hero-text">
-            <h1><span class="warna">Fresh</span> From the <span class="warna"> Garden </span> <br> and <span class="warna"> Healthy </span> for You </h1>
-            <p>We are committed to providing fresh vegetables, fruits, and premium quality meats<br>that are cared for with all our heart. We prioritize freshness and cleanliness in every<br>product we offer.</p>
-            <button class="btn-primary">Shop Now</button>
-            <button class="btn-secondary">Learn More <iconify-icon class="arrow-up-right" icon="prime:arrow-up-right"></iconify-icon></button>
-        </div>
-
-        <!-- untuk hidden br di mode tablet sama mobile -->
-        <div class="hero-text-hd">
             <h1><span class="warna">Fresh</span> From the <span class="warna"> Garden </span> and <span class="warna"> Healthy </span> for You </h1>
             <p>We are committed to providing fresh vegetables, fruits, and premium quality meats that are cared for with all our heart. We prioritize freshness and cleanliness in every product we offer.</p>
             <div class="btn">
@@ -78,8 +70,8 @@
 
             <!-- judul dan desc -->
             <div class="about-desc">
-                <h1>True <span class="warna">Organic </span> Healthy for Sure</h1>
-                <p>We believe that true health begins with what you eat. We are dedicated to providing you <br> with quality, fresh, true organic products. Every item you receive is our commitment to <br> quality and nutrition.</p>
+                <h1>True <span class="warna">Organic, </span> Healthy for Sure</h1>
+                <p>We believe that true health begins with what you eat. We are dedicated to providing you with quality, fresh, true organic products. Every item you receive is our commitment to quality and nutrition.</p>
             </div>
 
             <!-- info badges -->
@@ -106,7 +98,7 @@
                 </div>
             </div>
 
-            <div class="button">
+            <div class="btn">
                 <button class="btn-primary">Shop Now</button>
                 <button class="btn-secondary">Learn More <iconify-icon class="arrow-up-right" icon="prime:arrow-up-right"></iconify-icon></button>
             </div>
@@ -129,15 +121,53 @@
 
         <!-- button category -->
         <div class="button-category">
-            <button class="btn-filter">Vegetables</button>
-            <button class="btn-filter">Fruit</button>
-            <button class="btn-filter">Meat</button>
-            <button class="btn-filter">Fish</button> 
-
+            <div class="filter">
+                <button class="btn-filter">Vegetables</button>
+                <button class="btn-filter">Fruit</button>
+                <button class="btn-filter">Meat</button>
+                <button class="btn-filter">Fish</button> 
+            </div>
             <button class="view-all">View All</button> 
         </div>
 
+        <!-- card -->
+        <div class="container-card">
+            <div class="card">
+                <!-- gambar -->
+                <div class="sayur-card">
+                    <img src="image/brokoli.svg" alt="">
+                </div>
 
+                <!-- data sayur -->
+                <div class="desc"> <!--membungkus semua data data sayur, nama sayur, harga dll-->
+                    <div class="nama"> <!--membungkus nama dan kategori sayuran-->
+                        <p>Brokoli</p>
+                        <p class="category">Vegetables</p>
+                    </div>
+                </div>
+
+                <!-- desc sayur -->
+                <div class="desc2">
+                    <p>Fresh broccoli, vitamins C and K, and fiber, which are good for the body.</p>
+                </div>
+
+                <!-- rating dan harga -->
+                <div class="harga">
+                    <p>IDR 4.000</p>
+                    <div class="rating">
+                        <iconify-icon icon="ic--baseline-star"></iconify-icon>
+                        <p>4.9 (2.5K+ Reviews)</p>
+                    </div>
+                </div>
+
+                <!-- button cart sama buy -->
+                <div class="action">
+                    <button class="shop">Shop Now</button>
+                    <button class="cart"><iconify-icon icon="ion:cart-outline"></iconify-icon></button>
+                </div>
+            </div>
+
+        </div>
     </section>
     <script src="index.js"></script>
 </body>
